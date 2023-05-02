@@ -21,3 +21,4 @@ knitr::include_graphics("images/charstim2.png")
 Firstly, you put the variable __*Stimulus Effect*__ , a categorical variable that you wish to analyze. Then, you put the continuous and categorical variables you want to use for the characterization of the variable. 
 <br><br />
 
+
