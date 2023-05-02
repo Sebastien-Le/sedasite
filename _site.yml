@@ -1,0 +1,23 @@
+name: "my-website"
+navbar:
+  title: "MEDA"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Automatic Univariate Description"
+      menu: 
+        - text: "By Categorical/Quantitative Data"
+          href: catdes.html
+        - text: "By Textual Data"
+          href: textual.html
+        - text: "By Columns/Rows (Contingency Table)"
+          href: descfreq.html
+    - text: "Multivariate Analysis"
+      menu: 
+        - text: "Principal Component Analysis"
+          href: PCA.html
+        - text: "Correspondence Analysis"
+          href: CA.html
+        - text: "Multiple Correspondence Analysis"
+          href: MCA.html
+output_dir: "."

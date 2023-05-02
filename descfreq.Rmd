@@ -1,0 +1,32 @@
+---
+title: "Description of a contingency table"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+The last method of the **Automatic Univariate Description** submenu is the description of a contingency table. More precisely, this analysis is used to describe the rows using the columns (and vice versa).
+```{r descfreq1, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/descfreq1.png")
+```
+<br><br />
+
+## **The interface**
+
+Similarly to the other 2 methods of this submenu, the interface only has 3 parts to interact with. You have to indicate the column containing the rows labels, the columns holding the frequencies and the significance threshold.
+```{r descfreq2, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/descfreq2.png")
+```
+<br><br />
+
+## **Potential issue(s)**
+For the analysis to run smoothly, make sure that all the columns with the frequencies have a continuous (![](images/continuous.png)) measure type  and not a nominal (![](images/nominal.png)) measure type. If this condition is not met, an error will occur. This is due to the fact that nominal variables in Jamovi are imported as factor in R.
+<br><br />
+
+## **Example**
+For this example, we will be using the music data set (available with MEDA) which you can see in the first figure using the settings viewable on the second figure.
+```{r descfreq3, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics(c("images/descfreq3.png","images/descfreq4.png"))
+```
+<br><br />

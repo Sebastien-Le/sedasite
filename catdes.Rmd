@@ -1,0 +1,59 @@
+---
+title: "Description of a categorical or continuous variable with qualitative and quantitative data"
+output:
+  html_document:
+    toc: True
+    toc_float: True
+---
+
+The first method of the **Automatic Univariate Description** submenu is the description of either continuous or categorical variable by both continuous and categorical variables.
+```{r catdes1, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/catdes1.png")
+```
+<br><br />
+
+## **The interface**
+As it can be seen in the figure above, the interface is very simple and only has 3 fields you need to worry about.
+<br><br />
+```{r catdes2, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/catdes2.png")
+```
+Firstly, the __*Variable to Characterize*__ take either a continuous or categorical variable that you wish to describe. Then, you put the continuous and categorical variables you want to use for the characterization of the variable. Lastly, the __*Significance threshold*__ option set the threshold under which a variable is significantly describing the variable to characterize.
+<br><br />
+
+## **Examples**
+
+There are two ways of using this methods. You can either use it to see what variables are significantly describing the variable to characterize or you can set the __*Significance threshold*__ to 100 so that you have the indicators (R², correlation, etc.) for all the variables.\
+For the following examples, we will be using the bugs data set (available with Jamovi):
+```{r catdesbugs, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/catdesbugs.png")
+```
+<br><br />
+
+### Description of a continuous variable
+For this example we are going to describe the LDLF variable using all the other variables (except Subject) and let the default value for the __*Significance threshold*__:
+```{r catdesex1, out.width="50%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/catdesex1.png")
+```
+```{r catdesexres1, out.width="50%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/catdesexres1.png")
+```
+<br><br />
+
+We can see that for a threshold of 0.05, none of the categorical variables significantly describes the LDFL variable. However, the 3 continuous variables are significantly correlated (for a threshold of 0.05) to LDLF with correlations between 0.5 and 0.6.
+<br><br />
+
+Now, let's set the __*Significance threshold*__ to 100 to get a complete description of the variable.
+```{r catdesexres2, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics(c("images/catdesexres2.png","images/catdesexres3.png"))
+```
+<br><br />
+
+### Description of a categorical variable
+
+Let's describe the gender variable and set the threshold to 100 to see all the output.
+
+```{r catdesexres3, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics(c("images/catdesexres4.png","images/catdesexres5.png","images/catdesexres6.png"))
+```
+<br><br />
