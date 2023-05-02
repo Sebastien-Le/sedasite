@@ -1,23 +1,21 @@
 name: "my-website"
 navbar:
-  title: "MEDA"
+  title: "SEDA"
   left:
     - text: "Home"
       href: index.html
-    - text: "Automatic Univariate Description"
+    - text: "Fixed List of Attributes"
       menu: 
-        - text: "By Categorical/Quantitative Data"
-          href: catdes.html
-        - text: "By Textual Data"
+        - text: "Characterization of the Stimulus Space"
+          href: charstim.html
+        - text: "Representation of the Stimulus Space"
           href: textual.html
-        - text: "By Columns/Rows (Contingency Table)"
+        - text: "Identification of the defects"
           href: descfreq.html
-    - text: "Multivariate Analysis"
+    - text: "Free Perception"
       menu: 
-        - text: "Principal Component Analysis"
+        - text: "Analysis of Napping Data"
           href: PCA.html
-        - text: "Correspondence Analysis"
+        - text: "Analysis of Sorting Data"
           href: CA.html
-        - text: "Multiple Correspondence Analysis"
-          href: MCA.html
 output_dir: "."
