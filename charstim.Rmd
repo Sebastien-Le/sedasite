@@ -1,0 +1,23 @@
+---
+title: "Characterization of the Stimulus Space according to a fixed list of attributes"
+output:
+  html_document:
+    toc: True
+    toc_float: True
+---
+
+The first method of the **Fixed List of Attributes** submenu is the characterization of the stimulus space according to a fixed list of attributes.
+```{r catdes1, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("C:/Users/ketta/OneDrive/Documents/Stage/site/sedasite/images/charstim1.png")
+```
+<br><br />
+
+## **The interface**
+As it can be seen in the figure above, the interface is very simple and only has 4 fields you need to worry about.
+<br><br />
+```{r catdes2, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/charstim2.png")
+```
+Firstly, you put the variable __*Stimulus Effect*__ , a categorical variable that you wish to analyze. Then, you put the continuous and categorical variables you want to use for the characterization of the variable. 
+<br><br />
+

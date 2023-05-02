@@ -1,32 +1,24 @@
 ---
-title: "MEDA: Multivariate Exploratory Data Analysis with jamovi and FactoMineR"
+title: "SEDA: Sensory Evaluation Data Analysis with jamovi and FactoMineR"
 ---
 
-MEDA is jamovi module for multivariate exploratory data analysis methods such as Principal Components Analysis, Correspondence Analysis, Multiple Correspondence Analysis. Alongside those main methods, three other methods have been added to the modules: the description of a categorical or a continuous variable by categorical and continuous variables, the description of a categorical variable with a textual variable and finally, the description of a contingency table.
-
-This tutorial was mostly written by Maxime Saland.
-
-<!-- For more information about simple R Markdown websites, please read the documentation at https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html. -->
-
-<!-- Please also note that simple R Markdown sites are _not_ based on **blogdown**. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use **blogdown** instead: https://github.com/rstudio/blogdown. -->
-
-
+SEDA is jamovi module for sensory evaluation data analysis methods with two types of perception data : the first one describes stimuli according to a fixed list of attributes (QDA data, for instance) such as the characterization of the stimulus space, its representation or the identification of the defects, the second one describes stimuli freely by napping or sorting data.
 
 ```{r MenuMEDA, out.width="80%", fig.align="left", echo=FALSE}
-knitr::include_graphics("images/MenuMEDA.png")
+knitr::include_graphics("images/MenuSEDA.png")
 ```
 <br><br />
 
 Links to the user guide for each of those methods are available below.
 <br><br />
-For the **Automatic Univariate Description** methods:
+For the **Fixed List of Attributes** methods:
 
-* [Description of a categorical or continuous variable](catdes.html)
-* [Description of a categorical variable by a textual variable](descfreq.html)
-* [Description of a contingency table](textual.html)
+* [Characterization of the Stimulus Space](charstim.html)
+* [Representation of the Stimulus Space](repstim.html)            
+* [Identification of the defects](idef.html)
 
-For the **Multivariate Analysis** methods:
+For the **Free Perception** methods:
 
-* [Principal Component Analysis](PCA.html)
-* [Correspondence Analysis](CA.html)
-* [Multiple Correspondence Analysis](MCA.html)
+* [Analysis of Napping Data](AND.html)
+* [Analysis of Sorting Data](ASD.html)
+
