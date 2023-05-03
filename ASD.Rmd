@@ -1,0 +1,48 @@
+---
+title: "Analysis of Sorting Data"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+For the demonstration of the ASD module, we will be using the ... data set which comes with SEDA.
+
+```{r PCA1, out.width="80%", fig.align="left", echo=FALSE}
+#knitr::include_graphics("images/PCA1.png")
+```
+<br><br />
+
+## **The interface**
+
+
+<br><br />
+
+### Variables selection
+```{r PCA2, out.width="50%", fig.align="left", echo=FALSE}
+#knitr::include_graphics("images/PCA2.png")
+```
+<br><br />
+
+...
+<br><br />
+
+
+
+## **Potential issue(s)**
+
+### Incorrect number of factors
+
+For the AND to run correctly, the...
+
+## **Example**
+
+The data set used for this demonstration is the...
+```{r PCA5, out.width="40%", fig.align="left", echo=FALSE}
+#knitr::include_graphics(c("images/PCA5.png","images/PCA13.png","images/PCA14.png"))
+```
+<br><br />
+
+...
+<br><br />

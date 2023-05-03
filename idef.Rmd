@@ -1,0 +1,34 @@
+---
+title: "Identification of the defects"
+output:
+  html_document:
+    toc: True
+    toc_float: True
+---
+
+The last method of the **Fixed List of Attributes** submenu is used to identificate the defects.
+
+```{r textual1, out.width="80%", fig.align="left", echo=FALSE}
+#knitr::include_graphics("images/textual1.png")
+```
+<br><br />
+
+## **The interface**
+
+```{r textual2, out.width="60%", fig.align="left", echo=FALSE}
+#knitr::include_graphics("images/textual2.png")
+```
+<br><br />
+
+## **Potential issue(s)**
+
+
+
+## **Example**
+
+The data used to demonstrate this analysis is the...
+<br><br />
+
+```{r textual3, out.width="60%", fig.align="left", echo=FALSE}
+#knitr::include_graphics(c("images/textual3.png","images/textual4.png"))
+```
