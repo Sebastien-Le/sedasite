@@ -11,10 +11,10 @@
 
 
 
-<title>MEDA: Multivariate Exploratory Data Analysis with jamovi and FactoMineR</title>
+<title>SEDA: Sensory Evaluation Data Analysis with jamovi and FactoMineR</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -137,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -170,8 +178,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -179,16 +187,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -232,12 +233,12 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">MEDA</a>
+      <a class="navbar-brand" href="index.html">SEDA</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -245,38 +246,35 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Automatic Univariate Description
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Fixed List of Attributes
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="catdes.html">By Categorical/Quantitative Data</a>
+      <a href="charstim.html">Characterization of the Stimulus Space</a>
     </li>
     <li>
-      <a href="textual.html">By Textual Data</a>
+      <a href="repstim.html">Representation of the Stimulus Space</a>
     </li>
     <li>
-      <a href="descfreq.html">By Frequencies</a>
+      <a href="idef.html">Identification of the defects</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Multivariate Analysis
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Free Perception
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="PCA.html">Principal Component Analysis</a>
+      <a href="AND.html">Analysis of Napping Data</a>
     </li>
     <li>
-      <a href="CA.html">Correspondence Analysis</a>
-    </li>
-    <li>
-      <a href="MCA.html">Multiple Correspondence Analysis</a>
+      <a href="ASD.html">Analysis of Sorting Data</a>
     </li>
   </ul>
 </li>
@@ -292,15 +290,36 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">MEDA: Multivariate Exploratory Data Analysis with jamovi and FactoMineR</h1>
+<h1 class="title toc-ignore">SEDA: Sensory Evaluation Data Analysis with
+jamovi and FactoMineR</h1>
 
 </div>
 
 
-<p>MEDA is jamovi module for multivariate exploratory data analysis methods such as Principal Components Analysis, Correspondence Analysis, Multiple Correspondence Analysis.</p>
-<p>For more information about simple R Markdown websites, please read the documentation at <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.</p>
-<p>Please also note that simple R Markdown sites are <em>not</em> based on <strong>blogdown</strong>. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use <strong>blogdown</strong> instead: <a href="https://github.com/rstudio/blogdown" class="uri">https://github.com/rstudio/blogdown</a>.</p>
-<p><img src="images/MenuMEDA.png" width="80%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>SEDA is jamovi module for sensory evaluation data analysis methods
+with two types of perception data : the first one describes stimuli
+according to a fixed list of attributes (QDA data, for instance) such as
+the characterization of the stimulus space, its representation or the
+identification of the defects, the second one describes stimuli freely
+by napping or sorting data.</p>
+<p><img src="images/MenuSEDA.png" width="80%" style="display: block; margin: auto auto auto 0;" />
+<br><br /></p>
+<p>Links to the user guide for each of those methods are available
+below. <br><br /> For the <strong>Fixed List of Attributes</strong>
+methods:</p>
+<ul>
+<li><a href="charstim.html">Characterization of the Stimulus
+Space</a></li>
+<li><a href="repstim.html">Representation of the Stimulus
+Space</a><br />
+</li>
+<li><a href="idef.html">Identification of the defects</a></li>
+</ul>
+<p>For the <strong>Free Perception</strong> methods:</p>
+<ul>
+<li><a href="AND.html">Analysis of Napping Data</a></li>
+<li><a href="ASD.html">Analysis of Sorting Data</a></li>
+</ul>
 
 
 
