@@ -23,4 +23,14 @@ knitr::include_graphics("images/charstim2.png")
 Firstly, you put the variable __*Stimulus Effect*__ , a variable that...
 <br><br />
 
+## **Potential issue(s)**
+For the analysis to run smoothly, make sure that...
+<br><br />
+
+## **Example**
+For this example, we will be using gain the chocolate data set (available with SEDA).
+```{r descfreq3, out.width="60%", fig.align="left", echo=FALSE}
+#knitr::include_graphics(c("images/descfreq3.png","images/descfreq4.png"))
+```
+<br><br />
 
