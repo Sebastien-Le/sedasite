@@ -8,7 +8,7 @@ output:
 
 The first method of the **Fixed List of Attributes** submenu is the characterization of the stimulus space according to a fixed list of attributes.
 ```{r catdes1, out.width="80%", fig.align="left", echo=FALSE}
-knitr::include_graphics("images/charstim1.png")
+#knitr::include_graphics("images/charstim1.png")
 ```
 <br><br />
 
