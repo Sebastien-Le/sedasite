@@ -9,13 +9,13 @@ navbar:
         - text: "Characterization of the Stimulus Space"
           href: charstim.html
         - text: "Representation of the Stimulus Space"
-          href: textual.html
+          href: repstim.html
         - text: "Identification of the defects"
-          href: descfreq.html
+          href: idef.html
     - text: "Free Perception"
       menu: 
         - text: "Analysis of Napping Data"
-          href: PCA.html
+          href: AND.html
         - text: "Analysis of Sorting Data"
-          href: CA.html
+          href: ASD.html
 output_dir: "."
