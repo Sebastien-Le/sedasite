@@ -8,7 +8,7 @@ output:
 
 The first method of the **Fixed List of Attributes** submenu is the characterization of the stimulus space according to a fixed list of attributes.
 
-```{r catdes1, out.width="80%", fig.align="left", echo=FALSE}
+```{r charstim1, out.width="80%", fig.align="left", echo=FALSE}
 #knitr::include_graphics("images/charstim1.png")
 ```
 <br><br />
@@ -16,7 +16,7 @@ The first method of the **Fixed List of Attributes** submenu is the characteriza
 ## **The interface**
 As it can be seen in the figure above, the interface is very simple and only has 4 fields you need to worry about.
 <br><br />
-```{r catdes2, out.width="90%", fig.align="left", echo=FALSE}
+```{r charstim2, out.width="85%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim2.png")
 ```
 
@@ -29,8 +29,17 @@ For the analysis to run smoothly, make sure that...
 
 ## **Example**
 For this example, we will be using gain the chocolate data set (available with SEDA).
-```{r descfreq3, out.width="60%", fig.align="left", echo=FALSE}
-#knitr::include_graphics(c("images/descfreq3.png","images/descfreq4.png"))
+
+```{r charstim5, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/charstim5.png")
+```
+
+```{r charstim3, out.width="60%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/charstim3.png")
 ```
 <br><br />
 
+```{r charstim4, out.width="70%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/charstim4.png")
+```
+<br><br />

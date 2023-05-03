@@ -8,15 +8,15 @@ output:
 
 The last method of the **Fixed List of Attributes** submenu is used to identificate the defects.
 
-```{r textual1, out.width="80%", fig.align="left", echo=FALSE}
-#knitr::include_graphics("images/textual1.png")
+```{r idef1, out.width="80%", fig.align="left", echo=FALSE}
+#knitr::include_graphics("images/idef1.png")
 ```
 <br><br />
 
 ## **The interface**
 
-```{r textual2, out.width="60%", fig.align="left", echo=FALSE}
-#knitr::include_graphics("images/textual2.png")
+```{r idef2, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef2.png")
 ```
 <br><br />
 
@@ -26,9 +26,44 @@ The last method of the **Fixed List of Attributes** submenu is used to identific
 
 ## **Example**
 
-The data used to demonstrate this analysis is the...
+The data used to demonstrate this analysis is the milkshake dataset.
+
+```{r idef3, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef3.png")
+```
 <br><br />
 
-```{r textual3, out.width="60%", fig.align="left", echo=FALSE}
-#knitr::include_graphics(c("images/textual3.png","images/textual4.png"))
+```{r idef4, out.width="80%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef4.png")
 ```
+<br><br />
+
+```{r idef5, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef5.png")
+```
+<br><br />
+
+```{r idef6, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef6.png")
+```
+<br><br />
+
+```{r idef7, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef7.png")
+```
+<br><br />
+
+```{r idef8, out.width="70%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef8.png")
+```
+<br><br />
+
+```{r idef9, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef9.png")
+```
+<br><br />
+
+```{r idef10, out.width="90%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/idef10.png")
+```
+<br><br />
