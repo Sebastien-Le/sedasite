@@ -46,7 +46,7 @@ For the analysis to run smoothly, make sure that...
 <br><br />
 
 ## **Example**
-For this example, we will be using gain the chocolate data set (available with SEDA).
+For this example, we will be using again the chocolate data set "sensochoc" (available with SEDA).
 
 ```{r repstim7, out.width="90%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim5.png")
