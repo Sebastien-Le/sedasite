@@ -2,7 +2,7 @@
 title: "SEDA: Sensory Evaluation Data Analysis with jamovi and FactoMineR"
 ---
 
-SEDA is jamovi module for sensory evaluation data analysis methods with two types of perception data : the first one describes stimuli according to a fixed list of attributes (QDA data, for instance) such as the characterization of the stimulus space, its representation or the identification of the defects, the second one describes stimuli freely by napping or sorting data.
+SEDA is jamovi module for sensory evaluation data analysis methods with two types of perception data : the first one describes stimuli according to a fixed list of attributes (QDA data, for instance) such as the characterization of the stimulus space, its representation or the identification of the defects, the second one describes stimuli freely by napping or sorting data.There is also a submenu for Hedonic data, with Preference Mapping.
 
 ```{r MenuMEDA, out.width="80%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/MenuSEDA.png")
@@ -14,11 +14,16 @@ Links to the user guide for each of those methods are available below.
 For the **Fixed List of Attributes** methods:
 
 * [Characterization of the Stimulus Space](charstim.html)
-* [Representation of the Stimulus Space](repstim.html)            
+* [Representation of the Stimulus Space](repstim.html)
+* [Identification of CATA](idecat.html)
 * [Identification of the defects](idef.html)
 
 For the **Free Perception** methods:
 
 * [Analysis of Napping Data](AND.html)
 * [Analysis of Sorting Data](ASD.html)
+
+For **Hedonic Data**:
+
+* [Preference Mapping](prefmap.html)
 

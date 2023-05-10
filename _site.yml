@@ -10,6 +10,8 @@ navbar:
           href: charstim.html
         - text: "Representation of the Stimulus Space"
           href: repstim.html
+        - text: "Identification of CATA"
+          href: idecat.html
         - text: "Identification of the defects"
           href: idef.html
     - text: "Free Perception"
@@ -18,4 +20,8 @@ navbar:
           href: AND.html
         - text: "Analysis of Sorting Data"
           href: ASD.html
+    - text: "Hedonic Data"
+      menu: 
+        - text: "Preference Mapping"
+          href: prefmap.html
 output_dir: "."

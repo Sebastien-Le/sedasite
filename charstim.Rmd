@@ -17,7 +17,7 @@ The first method of the **Fixed List of Attributes** submenu is the characteriza
 ## **The interface**
 As it can be seen in the figure above, the interface is very simple and only has 4 fields you need to worry about.
 <br><br />
-```{r charstim2, out.width="85%", fig.align="left", echo=FALSE}
+```{r charstim2, out.width="65%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim2.png")
 ```
 
@@ -32,6 +32,8 @@ For this example, we will be using the chocolate data set "sensochoc" (available
 knitr::include_graphics("images/charstim5.png")
 ```
 <br><br />
+
+We are going to describe the Product according to the panelist and using a fixed list variables : Vanilla, Caramel and Bitterness. We let the default value for the Significance threshold:
 
 ```{r charstim3, out.width="80%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim3.png")
@@ -49,4 +51,6 @@ We see that products have been extremely differentiated by the panelists: it see
 ```{r charstim6, out.width="90%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim6.png")
 ```
+
+Each product is structured according to five components : In the first column, we have the attributes for each sensory profile. The second column shows the estimate coefficient associated with the __*Product effect*__. The third one gives the __*Adjusted mean*__ (mean + coefficient of the Product), the fourth column shows the p-value and the last one the value of the __*Vtest*__.
 <br><br />
