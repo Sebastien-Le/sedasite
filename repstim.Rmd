@@ -49,7 +49,7 @@ For the additionnal plots, you have two possibilities: you can decide to add a p
 knitr::include_graphics("images/repstim5.png")
 ```
 
-With the __*Resampling Options*__, you can choose the number of subjects and panels of your choice. Same method for the __*Significiance threshold*__ option. You can also center or scale by subject.
+With the  __*Resampling Options*__, you can choose the number of subjects and panels of your choice. Same method for the __*Significiance threshold*__ option. You can also center or scale by subject.
 <br><br />
 
 ### Numerical Indicators
@@ -57,8 +57,12 @@ With the __*Resampling Options*__, you can choose the number of subjects and pan
 ```{r repstim6, out.width="65%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/repstim6.png")
 ```
+
+Lastly, we have the options for the numerical indicators. The Significance threshold option from the Automatic Description of the Axes section fixes the threshold beneath which a variable characterize a dimension. The option Number of factors affect both the number of dimensions to be described and the number of dimensions shown for the tables.
 <br><br />
 
+## **Potential issue(s)**
+Concerning the __*Resampling Options*__, the number of subjects/ panels must not 
 
 ## **Example**
 For this example, we will be using again the chocolate data set "sensochoc" (available with SEDA).
