@@ -11,7 +11,7 @@
 
 
 
-<title>Characterization of the Stimulus Space according to a fixed list of attributes</title>
+<title>Characterization of the stimuli according to a fixed list of attributes</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -335,7 +335,10 @@ div.tocify {
       <a href="repstim.html">Representation of the Stimulus Space</a>
     </li>
     <li>
-      <a href="idef.html">Identification of the defects</a>
+      <a href="idecat.html">Identification of CATA</a>
+    </li>
+    <li>
+      <a href="idef.html">Identification of the Defects</a>
     </li>
   </ul>
 </li>
@@ -354,6 +357,18 @@ div.tocify {
     </li>
   </ul>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Hedonic Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prefmap.html">Preference Mapping</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -366,60 +381,70 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Characterization of the Stimulus Space
-according to a fixed list of attributes</h1>
+<h1 class="title toc-ignore">Characterization of the stimuli according
+to a fixed list of attributes</h1>
 
 </div>
 
 
-<p>The first method of the <strong>Fixed List of Attributes</strong>
-submenu is the characterization of the stimulus space according to a
-fixed list of attributes.</p>
-<p><br><br /></p>
+<p>Here, the <em>decat</em> function of the <em>SensoMineR</em> package
+has been interfaced. This function provides two types of output: a list
+of sensory descriptors that characterize the stimuli, and a description
+of the stimuli based on the sensory descriptors.</p>
 <div id="the-interface" class="section level2">
 <h2><strong>The interface</strong></h2>
-<p>As it can be seen in the figure above, the interface is very simple
-and only has 4 fields you need to worry about. <br><br />
-<img src="images/charstim2.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>Firstly, you put the variable <strong><em>Stimulus
-Effect</em></strong> , a categorical variable that refers to the product
-that you want to study. Then, you put the <strong><em>Subject
-Effect</em></strong>, the main subject that evaluates the product. The
-<strong><em>Sensory Attributes</em></strong> are the fixed attributes of
-your choice that helps in the description of the stimulus. Lastly, the
-<strong><em>Significiance threshold</em></strong> option set the
-threshold under which the sensory attributes describes significantly the
-stimulus. <br><br /></p>
+<p>As shown in the figure below, the interface is very simple and only
+has 4 fields you need to worry about. <br><br /></p>
+<p><img src="images/charstim2.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>First, you need to fill in the field associated with the
+<strong><em>Stimulus Effect</em></strong>, then the field associated
+with the <strong><em>Subject Effect</em></strong>. Each of these effects
+should be coded as a categorical variable. Finally, you have to fill in
+the field associated with the <strong><em>Sensory
+Attributes</em></strong>. You can choose as many sensory attributes as
+you like, the sensory attributes should be coded as continuous
+variables. By default, the <strong><em>Significiance
+threshold</em></strong> for the statistical tests is set to 5%.
+<br><br /></p>
 </div>
 <div id="example" class="section level2">
 <h2><strong>Example</strong></h2>
-<p>For this example, we will be using the chocolate data set “sensochoc”
-(available with SEDA).</p>
+<p>For this example, we will be using the <em>sensochoc</em> data set,
+available with SEDA: 6 chocolates have been evaluated twice by 29
+panelists, according to 14 sensory attributes.</p>
 <p><img src="images/charstim5.png" width="90%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p>We are going to describe the Product according to the panelist and
-using a fixed list variables : Vanilla, Caramel and Bitterness. We let
-the default value for the Significance threshold:</p>
-<p><img src="images/charstim3.png" width="80%" style="display: block; margin: auto auto auto 0;" />
+<p>We are going to describe the chocolates according to all the sensory
+attributes. To do so, for each sensory attribute, the <em>decat</em>
+function performs an analysis of variance, explaining the variability
+among the assessments by the stimulus effect and the panelist
+effect.</p>
+<p><img src="images/charstim3.png" width="75%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
+<p>The SEDA module provides a list of attributes for which the product
+effect is significant. This list of attributes is sorted from the most
+significant to the less (but still) significant (from the highest
+<em>Vtest</em> to the lowest <em>Vtest</em>). This list of attributes is
+obtained from the results of the different analyses of variance and is
+based on the <em>omnibus</em> test (F-test).</p>
 <p><img src="images/charstim4.png" width="50%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>This output highlights the sensory attributes for which products are
-differentiated at a significance threshold of
-<strong><em>0.05</em></strong>. This list of attributes is sorted from
-the most significant to the less (but still) significant. We see that
-products have been extremely differentiated by the panelists: it seems
-that some attributes, such as <strong><em>Bitterness</em></strong> or
-<strong><em>Caramel</em></strong>, are really specific to some products
-(according to the value of the <strong><em>“Vtest”</em></strong>).
-<br><br /></p>
-<p><img src="images/charstim6.png" width="90%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>Each product is structured according to five components : In the
-first column, we have the attributes for each sensory profile. The
-second column shows the estimate coefficient associated with the
-<strong><em>Product effect</em></strong>. The third one gives the
-<strong><em>Adjusted mean</em></strong> (mean + coefficient of the
-Product), the fourth column shows the p-value and the last one the value
-of the <strong><em>Vtest</em></strong>. <br><br /></p>
+<p>Then, the other main output of interest is a sensory description of
+each stimulus according the attributes.</p>
+<p><img src="images/charstim6.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>This output is structured according to five columns: the names of the
+sensory attributes, the estimate of the coefficient associated with the
+<em>Product effect</em> (the <span
+class="math inline">\(\alpha_i\)</span> of the model <span
+class="math inline">\(Y_{ij} = \mu + \alpha_i + \beta_j
++\epsilon_{ij}\)</span>), the <em>Adjusted mean</em> (the estimate of
+the <span class="math inline">\(\mu + \alpha_i\)</span>), the
+<em>p-value</em> associated with the test <span
+class="math inline">\(H_0: \mu_i=0 \; versus \; H_1: \mu_i \neq
+0\)</span> (based on a <em>Student</em> test), and the <em>Vtest</em>
+that combines the sign of the estimate of <span
+class="math inline">\(\mu_i\)</span> and the <em>p-value</em>.
+Practically, <em>choc1</em> can be considered as very bitter and not
+sweet at all. <br><br /></p>
 </div>
 
 
