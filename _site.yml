@@ -12,7 +12,7 @@ navbar:
           href: repstim.html
         - text: "Identification of CATA"
           href: idecat.html
-        - text: "Identification of the defects"
+        - text: "Identification of the Defects"
           href: idef.html
     - text: "Free Perception"
       menu: 

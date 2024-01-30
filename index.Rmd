@@ -1,29 +1,33 @@
 ---
-title: "SEDA: Sensory Evaluation Data Analysis with jamovi and FactoMineR"
+title: 'SEDA: Sensory Data Analysis with jamovi and SensoMineR'
+output:
+  html_document:
+    df_print: paged
 ---
 
-SEDA is jamovi module for sensory evaluation data analysis methods with two types of perception data : the first one describes stimuli according to a fixed list of attributes (QDA data, for instance) such as the characterization of the stimulus space, its representation or the identification of the defects, the second one describes stimuli freely by napping or sorting data.There is also a submenu for Hedonic data, with Preference Mapping.
+SEDA is jamovi module for analyzing sensory data. Three main types of data can be analyzed: data obtained when stimuli are described according to a fixed list of attributes (QDA data, for instance), data obtained when stimuli are described  "freely" (sorting data, for instance), and finally, hedonic data (external preference mapping).
 
 ```{r MenuMEDA, out.width="80%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/MenuSEDA.png")
 ```
 <br><br />
 
-Links to the user guide for each of those methods are available below.
-<br><br />
-For the **Fixed List of Attributes** methods:
+The following is a list of the methods that are implemented in the SEDA module.
+
+When stimuli are described according to a **fixed list of attributes**:
 
 * [Characterization of the Stimulus Space](charstim.html)
 * [Representation of the Stimulus Space](repstim.html)
 * [Identification of CATA](idecat.html)
-* [Identification of the defects](idef.html)
+* [Identification of the Defects](idef.html)
 
-For the **Free Perception** methods:
+
+When stimuli are described  **freely**:
 
 * [Analysis of Napping Data](AND.html)
 * [Analysis of Sorting Data](ASD.html)
 
-For **Hedonic Data**:
+When dealing with **dedonic data**:
 
 * [Preference Mapping](prefmap.html)
 

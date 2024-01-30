@@ -11,7 +11,7 @@
 
 
 
-<title>Identification of the defects</title>
+<title>Identification of the Defects</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -335,6 +335,9 @@ div.tocify {
       <a href="repstim.html">Representation of the Stimulus Space</a>
     </li>
     <li>
+      <a href="idecat.html">Identification of CATA</a>
+    </li>
+    <li>
       <a href="idef.html">Identification of the defects</a>
     </li>
   </ul>
@@ -354,6 +357,18 @@ div.tocify {
     </li>
   </ul>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Hedonic Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prefmap.html">Preference Mapping</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -366,42 +381,61 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Identification of the defects</h1>
+<h1 class="title toc-ignore">Identification of the Defects</h1>
 
 </div>
 
 
-<p>The last method of the <strong>Fixed List of Attributes</strong>
-submenu is used to identificate the defects.</p>
-<p><br><br /></p>
+<p>Here, the <em>JAR</em> function of the <em>SensoMineR</em> package
+has been interfaced. The methodology is explained in Pagès’ paper:
+<em>Statistical penalty analysis</em> (<em>Food Quality and Preference
+Volume 32, Part A, March 2014, Pages 16-23</em>).</p>
 <div id="the-interface" class="section level2">
 <h2><strong>The interface</strong></h2>
-<p><img src="images/idef2.png" width="80%" style="display: block; margin: auto auto auto 0;" />
+<p>As shown in the figure below, the interface is very simple and only
+has 5 fields you need to worry about. The Stimulus effect, the Subject
+effect, the Liking variable, the Sensory attributes and the way the
+level <em>just about right</em> has been coded in the dataset.</p>
+<p><img src="images/idef1.png" width="65%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-</div>
-<div id="potential-issues" class="section level2">
-<h2><strong>Potential issue(s)</strong></h2>
 </div>
 <div id="example" class="section level2">
 <h2><strong>Example</strong></h2>
-<p>The data used to demonstrate this analysis is the milkshake
-dataset.</p>
-<p><img src="images/idef3.png" width="90%" style="display: block; margin: auto auto auto 0;" />
+<p>The data used to demonstrate this analysis is the milkshake dataset.
+In this example, 3 milkshakes have been evaluated by 47 consumers on 10
+sensory attributes ; hedonic scores have also been provided.</p>
+<p><img src="images/idef4.png" width="65%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/idef4.png" width="80%" style="display: block; margin: auto auto auto 0;" />
+<p>The function provides two important results: a description of the
+products in terms of defects, and the defects that are important when
+assessing the products.</p>
+<p><img src="images/idef6.png" width="75%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/idef5.png" width="90%" style="display: block; margin: auto auto auto 0;" />
+<p>The milkshake 859 has been evaluated as <em>too fluid</em>, <em>not
+sweet enough</em>, when on the contrary the milkshake 972 has been
+evaluated as <em>too sweet</em>, with <em>too much texture</em>.</p>
+<p>This <em>univariate</em> description is completed by a multivariate
+graphical representation, thanks to a correspondence analysis applied on
+the contingency table crossing the stimuli as rows, the defects as
+columns.</p>
+<p><img src="images/idef8.png" width="80%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/idef6.png" width="90%" style="display: block; margin: auto auto auto 0;" />
+<p>Finally, the function provides a list of the defects with their
+respective impact on the hedonic scores.</p>
+<p><img src="images/idef9.png" width="60%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/idef7.png" width="90%" style="display: block; margin: auto auto auto 0;" />
-<br><br /></p>
-<p><img src="images/idef8.png" width="70%" style="display: block; margin: auto auto auto 0;" />
-<br><br /></p>
-<p><img src="images/idef9.png" width="90%" style="display: block; margin: auto auto auto 0;" />
-<br><br /></p>
+<p>To conclude, the functions provides a graphical representation that
+summarizes these information for the product associated with the first
+level of the product effect.</p>
 <p><img src="images/idef10.png" width="90%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
+<p>The order of the levels of the product effect can be changed easily.
+To do so, go back to data, click on the product variable and change the
+order of the levels by clicking on the arrows.</p>
+<p><img src="images/idef11.png" width="80%" style="display: block; margin: auto auto auto 0;" />
+<br><br /></p>
+<p>Here, you can see that product 284 is considered as the
+<em>first</em> product.</p>
 </div>
 
 

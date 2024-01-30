@@ -1,56 +1,50 @@
 ---
-title: "Characterization of the Stimulus Space according to a fixed list of attributes"
+title: "Characterization of the stimuli according to a fixed list of attributes"
 output:
   html_document:
     toc: True
     toc_float: True
 ---
 
-
-The first method of the **Fixed List of Attributes** submenu is the characterization of the stimulus space according to a fixed list of attributes.
-
-```{r charstim1, out.width="80%", fig.align="left", echo=FALSE}
-#knitr::include_graphics("images/charstim1.png")
-```
-<br><br />
+Here, the *decat* function of the *SensoMineR* package has been interfaced. This function provides two types of output: a list of sensory descriptors that characterize the stimuli, and a description of the stimuli based on the sensory descriptors.
 
 ## **The interface**
-As it can be seen in the figure above, the interface is very simple and only has 4 fields you need to worry about.
+As shown in the figure below, the interface is very simple and only has 4 fields you need to worry about.
 <br><br />
+
 ```{r charstim2, out.width="65%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim2.png")
 ```
 
-Firstly, you put the variable __*Stimulus Effect*__ , a categorical variable that refers to the product that you want to study. Then, you put the __*Subject Effect*__, the main subject that evaluates the product. The __*Sensory Attributes*__ are the fixed attributes of your choice that helps in the description of the stimulus. Lastly, the __*Significiance threshold*__ option set the threshold under which the sensory attributes describes significantly the stimulus.
+First, you need to fill in the field associated with the __*Stimulus Effect*__, then the field associated with the __*Subject Effect*__. Each of these effects should be coded as a categorical variable. Finally, you have to fill in the field associated with the  __*Sensory Attributes*__. You can choose as many sensory attributes as you like, the sensory attributes should be coded as continuous variables. By default, the __*Significiance threshold*__ for the statistical tests is set to 5%.
 <br><br />
 
-
 ## **Example**
-For this example, we will be using the chocolate data set "sensochoc" (available with SEDA).
+For this example, we will be using the *sensochoc* data set, available with SEDA: 6 chocolates have been evaluated twice by 29 panelists, according to 14 sensory attributes.
 
 ```{r charstim5, out.width="90%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim5.png")
 ```
 <br><br />
 
-We are going to describe the Product according to the panelist and using a fixed list variables : Vanilla, Caramel and Bitterness. We let the default value for the Significance threshold:
+We are going to describe the chocolates according to all the sensory attributes. To do so, for each sensory attribute, the *decat* function performs an analysis of variance, explaining the variability among the assessments by the stimulus effect and the panelist effect.
 
-```{r charstim3, out.width="80%", fig.align="left", echo=FALSE}
+```{r charstim3, out.width="75%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim3.png")
 ```
 <br><br />
+
+The SEDA module provides a list of attributes for which the product effect is significant. This list of attributes is sorted from the most significant to the less (but still) significant (from the highest *Vtest* to the lowest *Vtest*). This list of attributes is obtained from the results of the different analyses of variance and is based on the *omnibus* test (F-test).
 
 ```{r charstim4, out.width="50%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim4.png")
 ```
 
-This output highlights the sensory attributes for which products are differentiated at a significance threshold of __*0.05*__. This list of attributes is sorted from the most significant to the less (but still) significant.
-We see that products have been extremely differentiated by the panelists: it seems that some attributes, such as __*Bitterness*__ or __*Caramel*__, are really specific to some products (according to the value of the __*"Vtest"*__).
-<br><br />
+Then, the other main output of interest is a sensory description of each stimulus according the attributes.
 
-```{r charstim6, out.width="90%", fig.align="left", echo=FALSE}
+```{r charstim6, out.width="60%", fig.align="left", echo=FALSE}
 knitr::include_graphics("images/charstim6.png")
 ```
 
-Each product is structured according to five components : In the first column, we have the attributes for each sensory profile. The second column shows the estimate coefficient associated with the __*Product effect*__. The third one gives the __*Adjusted mean*__ (mean + coefficient of the Product), the fourth column shows the p-value and the last one the value of the __*Vtest*__.
+This output is structured according to five columns: the names of the sensory attributes, the estimate of the coefficient associated with the *Product effect* (the $\alpha_i$ of the model $Y_{ij} = \mu + \alpha_i + \beta_j +\epsilon_{ij}$), the *Adjusted mean* (the estimate of the $\mu + \alpha_i$), the *p-value* associated with the test $H_0: \mu_i=0 \; versus \; H_1: \mu_i \neq 0$ (based on a *Student* test), and the *Vtest* that combines the sign of the estimate of $\mu_i$ and the *p-value*. Practically, *choc1* can be considered as very bitter and not sweet at all.
 <br><br />

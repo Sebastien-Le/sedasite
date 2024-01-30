@@ -11,7 +11,7 @@
 
 
 
-<title>Representation of the Stimulus Space</title>
+<title>Representation of the stimuli according to a fixed list of attributes</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -381,99 +381,93 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Representation of the Stimulus Space</h1>
+<h1 class="title toc-ignore">Representation of the stimuli according to
+a fixed list of attributes</h1>
 
 </div>
 
 
-<p>The second method of the <strong>Fixed List of Attributes</strong>
-submenu is the representation of the stimulus space according to a fixed
-list of attributes.</p>
-<p><br><br /></p>
+<p>Here, the <em>panellipse</em> function of the <em>SensoMineR</em>
+package has been interfaced: virtual panels are generated using Boostrap
+techniques in order to display confidence ellipses around products.</p>
 <div id="the-interface" class="section level2">
 <h2><strong>The interface</strong></h2>
-<p>This interface has a richer structure than the first submenu.It might
-feels intimidating at first, but we will see how it works step by
-step.</p>
-<div id="variable-selection" class="section level3">
-<h3>Variable selection</h3>
-<p><img src="images/repstim2.png" width="65%" style="display: block; margin: auto auto auto 0;" />
-The first part is about selecting the variables for your analysis and
-giving them a role. As you can see on the figure above, there are 3
-different types of variable for the representation (same as the first
-page of the submenu). The description of the attributes is available on
-the page <strong><em>Characterization of the stimulus space according to
-a fixed list of attributes</em></strong>. <br><br /></p>
-</div>
-<div id="options-on-the-sensory-attributes" class="section level3">
-<h3>Options on the Sensory Attributes</h3>
-<p><img src="images/repstim3.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>There are two filters concerning the <strong><em>Sensory
-Attributes</em></strong> : - An option called <strong><em>Scale to unit
-variance</em></strong>. This option purpose is to normalize the Sensory
-Attributes used in the representation. Since most of the time the
-representation of stimuli are performed on normalized data, this option
-is checked by default. - An option <strong><em>Selection of the Sensory
-Attributes</em></strong> that aims in choosing the
-<strong><em>p-value</em></strong> of the Stimulus Effect.</p>
-</div>
-<div id="graphic-options" class="section level3">
-<h3>Graphic options</h3>
-<p><img src="images/repstim4.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>Let’s move on to the next set of options: the Graphic options. As the
-name suggests, those options rule what will be plotted on the graphics
-in the results window. With those options, you can choose which
-components to plot on the x-axis and the y-axis. For the additionnal
-plots, you have two possibilities: you can decide to add a plot that
-represents stimuli according to the panels of each product (separated
-with different colors), which shows the variability of stimuli, or you
-can choose an additionnal plot that does the same but with sensory
-attributes. <br><br /></p>
-</div>
-<div id="resampling-options" class="section level3">
-<h3>Resampling Options</h3>
-<p><img src="images/repstim5.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>With the <strong><em>Resampling Options</em></strong>, you can choose
-the number of subjects and panels of your choice. Same method for the
-<strong><em>Significiance threshold</em></strong> option. You can also
-center or scale by subject. <br><br /></p>
-</div>
-<div id="numerical-indicators" class="section level3">
-<h3>Numerical Indicators</h3>
-<p><img src="images/repstim6.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>Lastly, we have the options for the numerical indicators. The
-Significance threshold option from the Automatic Description of the Axes
-section fixes the threshold beneath which a variable characterize a
-dimension. The option Number of factors affect both the number of
-dimensions to be described and the number of dimensions shown for the
-tables. <br><br /></p>
-</div>
-</div>
-<div id="potential-issues" class="section level2">
-<h2><strong>Potential issue(s)</strong></h2>
-<p>Concerning the <strong><em>Resampling Options</em></strong>, the
-number of subjects/ panels must not</p>
+<p>As shown in the figure above, the interface is very simple and only
+has 4 fields you need to worry about. Basically, it’s the same main
+parameters as in the <em>decat</em> function, plus some graphic and
+resampling options that you don’t need to worry about in the first
+instance.</p>
+<p><img src="images/repstim2.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+<!-- The first part is about selecting the variables for your analysis and giving them a role. As you can see on the figure above, there are 3 different types of variable for the representation (same as the first page of the submenu). The description of the attributes is available on the page __*Characterization of the stimulus space according to a fixed list of attributes*__. -->
+<!-- <br><br /> -->
+<!-- ### Options on the Sensory Attributes -->
+<!-- ```{r repstim3, out.width="65%", fig.align="left", echo=FALSE} -->
+<!-- knitr::include_graphics("images/repstim3.png") -->
+<!-- ``` -->
+<!-- There are two filters concerning the __*Sensory Attributes*__ : -->
+<!-- - An option called __*Scale to unit variance*__. This option purpose is to normalize the Sensory Attributes used in the representation. Since most of the time the representation of stimuli are performed on normalized data, this option is checked by default. -->
+<!-- - An option __*Selection of the Sensory Attributes*__ that aims in choosing the __*p-value*__ of the Stimulus Effect. -->
+<!-- ### Graphic options -->
+<!-- ```{r repstim4, out.width="65%", fig.align="left", echo=FALSE} -->
+<!-- knitr::include_graphics("images/repstim4.png") -->
+<!-- ``` -->
+<!-- Let’s move on to the next set of options: the Graphic options. As the name suggests, those options rule what will be plotted on the graphics in the results window. With those options, you can choose which components to plot on the x-axis and the y-axis.  -->
+<!-- For the additionnal plots, you have two possibilities: you can decide to add a plot that represents stimuli according to the panels of each product (separated with different colors), which shows the variability of stimuli, or you can choose an additionnal plot that does the same but with sensory attributes. -->
+<!-- <br><br /> -->
+<!-- ### Resampling Options -->
+<!-- ```{r repstim5, out.width="65%", fig.align="left", echo=FALSE} -->
+<!-- knitr::include_graphics("images/repstim5.png") -->
+<!-- ``` -->
+<!-- With the  __*Resampling Options*__, you can choose the number of subjects and panels of your choice. Same method for the __*Significiance threshold*__ option. You can also center or scale by subject. -->
+<!-- <br><br /> -->
+<!-- ### Numerical Indicators -->
+<!-- ```{r repstim6, out.width="65%", fig.align="left", echo=FALSE} -->
+<!-- knitr::include_graphics("images/repstim6.png") -->
+<!-- ``` -->
+<!-- Lastly, we have the options for the numerical indicators. The Significance threshold option from the Automatic Description of the Axes section fixes the threshold beneath which a variable characterize a dimension. The option Number of factors affect both the number of dimensions to be described and the number of dimensions shown for the tables. -->
+<!-- <br><br /> -->
+<!-- ## **Potential issue(s)** -->
+<!-- Concerning the __*Resampling Options*__, the number of subjects/ panels must not  -->
 </div>
 <div id="example" class="section level2">
 <h2><strong>Example</strong></h2>
-<p>For this example, we will be using again the chocolate data set
-“sensochoc” (available with SEDA).</p>
+<p>For this example, we will be using the <em>sensochoc</em> data set,
+available with SEDA: 6 chocolates have been evaluated twice by 29
+panelists, according to 14 sensory attributes.</p>
 <p><img src="images/charstim5.png" width="90%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
+<p>We are going to get a multivariate representation of the chocolates
+according to all the sensory attributes. To do so, for each sensory
+attribute, the <em>panellipse</em> function performs an analysis of
+variance, explaining the variability among the assessments by the
+stimulus effect and the panelist effect. Then, from the adjusted means
+calculated for each stimulus and each attribute, the <em>panellipse</em>
+function performs a PCA in order to get a multivariate representation of
+the stimuli.</p>
 <p><img src="images/repstim7.png" width="65%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
+<p>As explained previously, a PCA is performed on the adjusted means
+calculated from the <em>anova</em>. The PCA provides a representation of
+the stimuli as illustrated below.</p>
 <p><img src="images/repstim8.png" width="95%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
+<p>It also provides a representation of the sensory attributes as
+illustrated below.</p>
 <p><img src="images/repstim9.png" width="70%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/repstim10.png" width="60%" style="display: block; margin: auto auto auto 0;" />
+<p>These two representations are to be interpreted jointly. They can
+also be interpreted thanks to the automatic description of the axes
+provided below.</p>
+<p><img src="images/repstim11.png" width="35%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/repstim11.png" width="40%" style="display: block; margin: auto auto auto 0;" />
-<br><br /></p>
+<p>Thanks to resampling techniques, confidence ellipses around stimuli
+can be obtained. The idea is simple: virtual panels are generated thanks
+to resampling techniques and <em>new</em> adjusted means are calculated
+and added as supplementary information.</p>
 <p><img src="images/repstim12.png" width="95%" style="display: block; margin: auto auto auto 0;" />
 <br><br /></p>
-<p><img src="images/repstim13.png" width="80%" style="display: block; margin: auto auto auto 0;" />
-<br><br /></p>
+<p>The number of virtual panels can be modified, as well as the number
+of panelists <em>per</em> virtual panel.</p>
 </div>
 
 

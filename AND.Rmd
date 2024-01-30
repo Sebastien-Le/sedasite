@@ -6,41 +6,24 @@ output:
     toc_float: yes
 ---
 
-The second method of the **Free perception** submenu is AND method. The data used here is the gmo data set provided with the SEDA module.
-```{r MCA1, out.width="60%", fig.align="left", echo=FALSE}
-#knitr::include_graphics("images/MCA1.png")
-```
-<br><br />
+For the analysis of Napping Data, a particular case of MFA has been interfaced. To illustrate the method we will work on the *perfumes_napping* dataset.
 
 ## **The interface**
 
+As shown in the figure below, the interface is very simple and has only 2 fields you really need to worry about: the labels and the coordinates. Supplementary information are really interesting to add, but they are also optional: the analysis can be run without them. To run the an
 
-<br><br />
-
-### Variables selection
-```{r PCA2, out.width="50%", fig.align="left", echo=FALSE}
-#knitr::include_graphics("images/PCA2.png")
+```{r nap1, out.width="65%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/nap1.png")
 ```
-<br><br />
 
-...
-<br><br />
-
-
-
-## **Potential issue(s)**
-
-### Incorrect number of factors
-
-For the AND to run correctly, the...
 
 ## **Example**
 
-The data set used for this demonstration is the...
-```{r PCA5, out.width="40%", fig.align="left", echo=FALSE}
-#knitr::include_graphics(c("images/PCA5.png","images/PCA13.png","images/PCA14.png"))
-```
-<br><br />
+To illustrate the function we use the *perfumes_napping* dataset, where 12 perfumes were evaluated by 60 consumers.
 
-...
+```{r nap2, out.width="65%", fig.align="left", echo=FALSE}
+knitr::include_graphics("images/nap2.png")
+```
+
+
 <br><br />

@@ -386,7 +386,51 @@ div.tocify {
 </div>
 
 
-
+<hr />
+<p>Here, we have combined and interfaced three functions of the
+<em>FactoMineR</em> package: the <em>textual</em> function, the
+<em>descfreq</em> function and the <em>CA</em> function. CATA can be
+considered as words, and thanks to the <em>textual</em> function one can
+obtain a contingency table crossing the stimuli as rows and the CATA
+words as columns. From this contingency table, it is quite easy to get a
+description of each stimulus based on the words that have been
+checked.</p>
+<div id="the-interface" class="section level2">
+<h2><strong>The interface</strong></h2>
+<p>As shown in the figure above, the interface is very simple and only
+has 2 fields you need to worry about: the stimulus effect coded as a
+categorical variable, the CATA words coded as binary or dummy
+variables.</p>
+<p><img src="images/idecat1.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><br><br /></p>
+</div>
+<div id="example" class="section level2">
+<h2><strong>Example</strong></h2>
+<p>For this example, we will be using the data from Davide Giacalone’s
+paper: <em>Situational appropriateness of beer is influenced by product
+familiarity</em> (<em>Food Quality and Preference 39 (2015) 16–27)</em>.
+As explained in the paper, “<em>a questionnaire was designed using beer
+images and names as stimuli. (…) For each beer image shown, consumers
+evaluated appropriateness for different contexts and perceived
+familiarity.</em>”</p>
+<p><img src="images/idecat2.png" width="65%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>The function provides three main results: a contingency table
+crossing the stimuli as rows and the CATA words as columns
+(<em>textual::FactoMineR</em>), a description of the stimuli
+(<em>descfreq::FactoMineR</em>), a multivariate representation of the
+stimuli and the CATA words (<em>CA::FactoMineR</em>).</p>
+<p>The description of the stimuli (below) is based on the hypergeometric
+distribution. For each product, the function provides a list of CATA
+words that have been particularly checked, or that haven’t been
+particularly checked. In this example, <em>GMA</em> has been associated
+with the words <em>Rugby</em> and <em>CampingFishing</em> ; on the
+contrary, it has not been associated with <em>Treat</em> and
+<em>Gift</em>.</p>
+<p><img src="images/idecat3.png" width="75%" style="display: block; margin: auto auto auto 0;" /></p>
+<p>Then, we apply the <em>CA</em> function on the contigency table to
+get a multivariate representation of the stimuli.</p>
+<p><img src="images/idecat4.png" width="75%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
 
 
 
